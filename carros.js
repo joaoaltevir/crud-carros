@@ -22,17 +22,9 @@ const adicionar = () => {
   console.log("\nCarro adicionado com sucesso!\n");
 };
 const listar = () => {
-  for (let i = 0; i < carros.length; i++) {
-    if (carros[i].Status == "Online") {
-      console.log(`
-    Registro: ${i}
-        Marca: ${carros[i].Marca}
-        Modelo: ${carros[i].Modelo}
-        Preço: ${carros[i].Preco}
-        Ano: ${carros[i].Ano}
-    `);
-    }
-  }
+  carros.forEach(element => {
+    console.log(element)
+  })
 };
 const alterarMarca = (i) => {
   carros[i].Marca = prompt("Informe a nova marca do carro: ");
