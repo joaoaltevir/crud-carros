@@ -22,35 +22,33 @@ const adicionar = () => {
   console.log("\nCarro adicionado com sucesso!\n");
 };
 const listar = () => {
-  for (let i = 0; i < carros.length; i++) {
-    if (carros[i].Status == "Online") {
-      console.log(`
-    Registro: ${i}
-        Marca: ${carros[i].Marca}
-        Modelo: ${carros[i].Modelo}
-        Preço: ${carros[i].Preco}
-        Ano: ${carros[i].Ano}
+  carros.forEach((element , index) => {
+    console.log(`
+    Registro: ${index}
+        Marca: ${element.Marca}
+        Modelo: ${element.Modelo}
+        Preço: ${element.Preco}
+        Ano: ${element.Ano}
     `);
-    }
-  }
+  })
 };
-const alterarMarca = (i) => {
+const alterarMarca = i => {
   carros[i].Marca = prompt("Informe a nova marca do carro: ");
   console.log("Alterado com sucesso!");
 };
-const alterarModelo = (i) => {
+const alterarModelo = i => {
   carros[i].Modelo = prompt("Informe o novo modelo do carro: ");
   console.log("Alterado com sucesso!");
 };
-const alterarPreco = (i) => {
+const alterarPreco = i => {
   carros[i].Preco = prompt("Informe o novo preço do carro: ");
   console.log("Alterado com sucesso!");
 };
-const alterarAno = (i) => {
+const alterarAno = i => {
   carros[i].Ano = prompt("Informe o ano do carro: ");
   console.log("Alterado com sucesso!");
 };
-const alterar = (indice) => {
+const alterar = indice => {
   console.log(`O que você deseja alterar?:
     [1]Marca
     [2]Modelo
